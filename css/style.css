@@ -1,0 +1,316 @@
+/*
+FONTS
+font-family: "Comic Neue", sans-serif;
+font-family: "League Script", cursive;
+font-family: "Amatic SC", sans-serif;
+font-family: "Caveat", cursive;
+*/
+
+html, body {
+    height: 100%;
+}
+
+
+header {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Amatic SC", sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: -20px;
+
+}
+
+
+select {
+    border: 0px;
+    background-color: white;
+    scrollbar-arrow-color: white;
+    appearance: none;
+    text-align: right;
+    margin-bottom: -60px;
+    z-index: 10;
+    width: 100px;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+select:focus, select:active {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+div {
+    width: 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    margin-left: calc(100% - 100px);
+}
+
+
+.buttons {
+  display: flex;
+  height: auto;
+  justify-content: left;
+  margin-left: 10%;
+
+  text-align: center;
+  width: auto;
+  gap: 20px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.buttons button {
+  background: var(--accent, #383630);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: none;
+  padding-bottom: 20px;
+  height: 10px;
+  width: 10%;
+  min-width: 70px;
+  font-weight: 800;
+  color: white;
+
+}
+
+.buttons button:hover{
+  background-color: var(--text, #383019);
+}
+
+
+.notes {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+}
+
+.notes textarea{
+    flex: 1;
+    min-height: 180px;
+}
+
+
+
+
+
+fieldset {
+ margin: 20px;
+}
+
+
+input{
+    border: none;
+    border-bottom: 1px solid rgb(169, 180, 160);
+    padding: 0px;
+    font-size: 20px;
+    width: calc(50%);
+      font-family: "Architects Daughter", cursive !important;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font: inherit;
+    font-family: "Annie Use Your Telescope", cursive !important;
+    font-size: 20px !important;
+}
+
+textarea:focus {
+    border: none;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    background: #f7f5f2;
+    color: #383630;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+form {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 20px;
+    align-items: start;
+    grid-template-rows: auto auto 1fr;
+}
+
+fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 24px;
+    border: none;
+    border-radius: 14px;
+    background: #fffefa;
+}
+
+legend {
+    padding: 0;
+    font-family: "Handlee", cursive;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+fieldset:first-child {
+    grid-column: 1 / -1;
+    padding: 12px 18px;
+}
+
+select {
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    padding: 6px;
+    outline-offset: 3px;
+}
+
+input[type="text"] {
+    width: calc(100% - 65px);
+    margin-left: 8px;
+    font-family: "Caveat", cursive;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid #d8d3ca;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    line-height: 1.5;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-bottom-color: #777064;
+}
+
+/* Labels and rows */
+label {
+    color: #777168;
+}
+
+fieldset br {
+    line-height: 2.5;
+}
+
+/* Notes */
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 180px;
+    resize: vertical;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: 1.8;
+    outline: none;
+}
+
+/* Schedule */
+.schedule {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 16px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    fieldset:first-child,
+    .schedule {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+
+
+.mood {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    padding: 4px 8px;
+    background: transparent;
+}
+
+.mood select {
+    max-width: 180px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+
+
+/* COLORS                                        COLORS                COLORS*/
+
+body[data-theme="proud"] {
+    --bg: #e7dee9;
+    --card: #fffaff;
+    --text: #7b5c7c;
+    --accent: #896f8a;
+}
+
+body[data-theme="accomplished"] {
+    --bg: #dbe0d8;
+    --card: #fbfff8;
+    --text: #5c6459;
+    --accent: #849480;
+}
+
+body[data-theme="pleased"] {
+    --bg: #f1e6d8;
+    --card: #fffdf8;
+    --text: #8b7260;
+    --accent: #9e7f63;
+}
+
+body {
+    background: var(--bg, #f7f5f2);
+    color: var(--text, #383630);
+    transition: background 0.2s, color 0.2s;
+}
+
+fieldset {
+    background: var(--card, #fffefa);
+}
+
+input[type="text"]:focus {
+    border-bottom-color: var(--accent, #777064);
+}
+
+h1 {
+    color: var(--accent, #383630);
+}
+

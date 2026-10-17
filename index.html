@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Caveat:wght@400;500;600;700&family=Amatic+SC:wght@400;700&family=League+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caveat:wght@400..700&family=Handlee&family=League+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Architects+Daughter&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <header>
+            <h1>Daily Planner</h1>
+        </header>
+    <form onsubmit="saveInfo(event)" autocomplete="off">
+        <div></div>
+        <div>
+            <select name="emoji" id="emoji">
+                <option value="">-</option>
+                <option value="proud">( ◡̀  ̫ ◡́) ✧</option>
+                <option value="accomplished">٩(^ᗜ^ )و ´-</option>
+                <option value="pleased">(๑ᵔ⤙ᵔ๑)</option>
+            </select>
+        </div>
+        <fieldset autocomplete="off">
+            <legend>Todays priority</legend>
+            <label for="p1">1. </label>
+            <input type="text" name="p1"> <br>
+
+            <label for="p2">2. </label>
+            <input type="text" name="p2"> <br>
+
+            <label for="p1">3. </label>
+            <input type="text" name="p3"> 
+        </fieldset>
+
+        <fieldset class="notes" autocomplete="off">
+            <legend>Notes</legend>
+            <textarea name="notes" id="notes"></textarea>
+        </fieldset>
+            
+        <fieldset class="schedule" autocomplete="off">
+            <legend>Schedule</legend>
+            <label for="06">06 AM </label>
+            <input type="text" name="06"> <br>
+
+            <label for="07">07 AM </label>
+            <input type="text" name="07"> <br>
+
+            <label for="08">08 AM </label>
+            <input type="text" name="08"> <br>
+
+            <label for="09">09 AM </label>
+            <input type="text" name="09"> <br>
+
+            <label for="10">10 AM </label>
+            <input type="text" name="10"> <br>
+
+            <label for="11">11 AM </label>
+            <input type="text" name="11"> <br>
+
+            <label for="12">12 PM </label>
+            <input type="text" name="12"> <br>
+
+            <label for="13">01 PM </label>
+            <input type="text" name="13"> <br>
+
+            <label for="14">02 PM </label>
+            <input type="text" name="14"> <br>
+
+            <label for="15">03 PM </label>
+            <input type="text" name="15"> <br>
+
+            <label for="16">04 PM </label>
+            <input type="text" name="16"> <br>
+
+            <label for="17">05 PM </label>
+            <input type="text" name="17"> <br>
+
+            <label for="18">06 PM </label>
+            <input type="text" name="18"> <br>
+
+            <label for="19">07 PM </label>
+            <input type="text" name="19"> <br>
+
+            <label for="20">08 PM </label>
+            <input type="text" name="20"> <br>
+
+            <label for="21">09 PM </label>
+            <input type="text" name="21">
+        </fieldset>
+        <div class="buttons">
+            <button type="submit">Save</button>
+            <button type="button" onclick="resetInfo()">Reset</button>
+        </div>
+    </form>
+        
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>
